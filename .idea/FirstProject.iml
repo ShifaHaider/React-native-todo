@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/expo-permissions/packages/expo_permissions" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/expo-sensors/packages/expo_sensors" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="FirstProject node_modules" level="project" />
+  </component>
+</module>
