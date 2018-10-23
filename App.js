@@ -6,8 +6,7 @@ import firebase from 'firebase';
 import firestore from 'firebase/firestore'
 import { TextInput } from 'react-native';
 import { ListItem } from 'react-native-material-ui';
-
-//import { Container, Header, Content, Button, } from 'native-base';
+import { Container, Header, Content, Button, } from 'native-base';
 
 
 var config = {
