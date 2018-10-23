@@ -180,8 +180,6 @@ const styles = StyleSheet.create({
 });
 
 
-
-//    )
 //})}
 //<TouchableOpacity
 //style={{height: 40 ,backgroundColor:"purple", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
