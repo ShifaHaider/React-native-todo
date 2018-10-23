@@ -179,7 +179,6 @@ const styles = StyleSheet.create({
     },
 });
 
-//<ListItem key={2} onClick={this.handleOpen.bind(this, todo)} primaryText="Edit" leftIcon={<ActionGrade/>}/>
 
 //{this.state.todos.map((todos)=>{
 //    console.log(todos);
