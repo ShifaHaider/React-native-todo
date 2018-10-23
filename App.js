@@ -180,7 +180,6 @@ const styles = StyleSheet.create({
 });
 
 
-//    console.log(todos);
 //    return(
 //        <View>
 //            <ListItem>
