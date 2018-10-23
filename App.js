@@ -181,7 +181,6 @@ const styles = StyleSheet.create({
 
 
 
-//            </ListItem>
 //        </View>
 //    )
 //})}
