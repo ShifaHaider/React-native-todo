@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Button } from 'react-native';
+import { Button } from 'react-native';
 import { Alert } from 'react-native';
 import { ActivityIndicator, StyleSheet, Text, View, TouchableOpacity,  ScrollView} from 'react-native'
 import firebase from 'firebase';
