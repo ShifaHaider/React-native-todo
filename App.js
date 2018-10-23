@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
 });
 
 
-//    return(
+
 //        <View>
 //            <ListItem>
 //                <Text>Aaron Bennet</Text>
