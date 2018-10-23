@@ -8,7 +8,6 @@ import { TextInput } from 'react-native';
 import { ListItem } from 'react-native-material-ui';
 import { Container, Header, Content, Button, } from 'native-base';
 
-
 var config = {
     apiKey: "AIzaSyAwP9W6GBNU0-gZZtwU1EtWgn3feIsU9hw",
     authDomain: "react-slider-app.firebaseapp.com",
@@ -169,7 +168,7 @@ export default class App extends React.Component {
     }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({d
     container: {
         flex: 1,
         backgroundColor: '#fff',
