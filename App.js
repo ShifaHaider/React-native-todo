@@ -180,8 +180,7 @@ const styles = StyleSheet.create({
 });
 
 
-//})}
-//<TouchableOpacity
+\//<TouchableOpacity
 //style={{height: 40 ,backgroundColor:"purple", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
 //onPress={this.addTodo.bind(this)}>
 //<Text>ADD</Text>
