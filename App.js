@@ -181,7 +181,6 @@ const styles = StyleSheet.create({
 
 
 
-//                <Text>Aaron Bennet</Text>
 //            </ListItem>
 //        </View>
 //    )
