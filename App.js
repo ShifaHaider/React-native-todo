@@ -179,7 +179,6 @@ const styles = StyleSheet.create({
     },
 });
 
-//<ListItem key={1} primaryText="Delete" onClick={this.deleteTodo.bind(this, todo)} leftIcon={<ActionGrade/>}/>,
 //<ListItem key={2} onClick={this.handleOpen.bind(this, todo)} primaryText="Edit" leftIcon={<ActionGrade/>}/>
 
 //{this.state.todos.map((todos)=>{
