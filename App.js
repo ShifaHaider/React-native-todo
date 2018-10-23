@@ -34,7 +34,7 @@ export default class App extends React.Component {
             edit: false
         };
         this.db = firebase.firestore();
-        const settings = {/* your settings... */ timestampsInSnapshots: true};
+        const settings = {timestampsInSnapshots: true};
         this.db.settings(settings);
         this.loadTodos();
         var room;
@@ -178,8 +178,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 });
-
-
-
-
 
