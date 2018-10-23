@@ -180,7 +180,6 @@ const styles = StyleSheet.create({
 });
 
 
-//{this.state.todos.map((todos)=>{
 //    console.log(todos);
 //    return(
 //        <View>
