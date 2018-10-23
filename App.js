@@ -181,7 +181,6 @@ const styles = StyleSheet.create({
 
 
 
-//onPress={this.addTodo.bind(this)}>
 //<Text>ADD</Text>
 //</TouchableOpacity>
 
