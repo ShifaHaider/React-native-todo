@@ -43,7 +43,6 @@ export default class Todo extends React.Component {
             'Alert Title',
             'My Alert Msg',
             [
-                {text: 'OK', onPress: () => console.log('OK Pressed')},
             ],
             {cancelable: false}
         )
