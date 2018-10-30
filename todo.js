@@ -64,7 +64,6 @@ export default class Todo extends React.Component {
         this.db.collection('todos').onSnapshot((todoCollection) => {
             todoCollection.docChanges().forEach((todos) => {
                 var todo = todos.doc.data();
-                console.log(todo);
                 todo.id = todos.doc.id;
                 if (todos.type === 'added') {
                     var arr = this.state.todos;
@@ -82,7 +81,6 @@ export default class Todo extends React.Component {
                 }
                 else if (todos.type == 'modified') {
                     var arr3 = this.state.todos;
-
                     arr3.forEach((value, index) => {
                         if (todo.id == value.id) {
                             arr3[index].text = this.state.text;
