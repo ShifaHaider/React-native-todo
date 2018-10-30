@@ -37,10 +37,6 @@ export default class Todo extends React.Component {
         this.loadTodos();
         var room;
     }
-
-    callAlert() {
-    }
-
     addTodo() {
         this.state.text != '' ?
             this.db.collection('todos').add({
