@@ -41,7 +41,6 @@ export default class Todo extends React.Component {
     callAlert() {
         Alert.alert(
             'Alert Title',
-            'My Alert Msg',
             {cancelable: false}
         )
     }
