@@ -151,7 +151,7 @@ export default class Todo extends React.Component {
         );
     }
 }
-Hellooooooo
+Helloooooo
 const styles = StyleSheet.create({
     container: {
         flex: 1,
