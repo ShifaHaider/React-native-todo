@@ -151,7 +151,7 @@ export default class Todo extends React.Component {
         );
     }
 }
-Hellooooooooooooooooo
+Helloooooooooooooo
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -160,5 +160,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
-
 
