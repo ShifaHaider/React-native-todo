@@ -7,6 +7,7 @@ import firestore from 'firebase/firestore'
 import { TextInput } from 'react-native';
 import { ListItem } from 'react-native-material-ui';
 import { Container, Header, Content, Button, } from 'native-base';
+import { Toolbar } from 'react-native-material-ui';
 
 var config = {
     apiKey: "AIzaSyAwP9W6GBNU0-gZZtwU1EtWgn3feIsU9hw",
@@ -17,7 +18,6 @@ var config = {
     messagingSenderId: "452274135714"
 };
 firebase.initializeApp(config);
-
 
 export default class Todo extends React.Component {
 
@@ -146,7 +146,6 @@ export default class Todo extends React.Component {
                         )
                     })}
                 </View>
-
             </View>
         );
     }
@@ -160,3 +159,4 @@ const styles = StyleSheet.create({
     }
 });
 
+Hellooooooooooooooooooooooooooooooooooooooooooooooooooooo
