@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
-Hellooooooooooooooooooooooooooooooooooooooooooo
+Helloooooooooooooooooooooooooooooooooooooooooo
