@@ -106,7 +106,11 @@ export default class Todo extends React.Component {
                             value={this.state.text}/>
                     </View>
                     <View style={{justifyContent:"center" }}>
-                        {this.state.add ? <Button primary text="Primary" />:
+                        {this.state.add ? <View><TouchableOpacity
+                            style={{height: 40 ,backgroundColor:"white", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
+                            onPress={this.addTodo.bind(this)}>
+                            <Text>ADD</Text>
+                        </TouchableOpacity></View>:
                             <View>
                                 <TouchableOpacity
                                     style={{height: 40 ,backgroundColor:"gray", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
