@@ -1,18 +1,6 @@
 import React from 'react';
-import { Navigator, NativeModules } from 'react-native';
+import { Navigator, NativeModules,Text, View, StyleSheet } from 'react-native';
 import Todo from './todo.js'
-import { COLOR, ThemeContext, getTheme } from 'react-native-material-ui';
-
-const uiTheme = {
-    palette: {
-        primaryColor: COLOR.green500
-    },
-    toolbar: {
-        container: {
-            height: 50
-        }
-    }
-};
 
 export default class App extends React.Component {
 
@@ -24,9 +12,9 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <ThemeContext.Provider value={getTheme(uiTheme)}>
-                <Todo/>
-            </ThemeContext.Provider>
+               <View style={{flex: 1}}>
+                  <Todo/>
+               </View>
         );
     }
 }

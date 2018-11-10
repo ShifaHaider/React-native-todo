@@ -1,13 +1,11 @@
 import React from 'react';
-import { Button } from 'react-native';
+//import { Button } from 'react-native';
 import { Alert } from 'react-native';
 import { ActivityIndicator, StyleSheet, Text, View, TouchableOpacity,  ScrollView} from 'react-native'
 import firebase from 'firebase';
 import firestore from 'firebase/firestore'
 import { TextInput } from 'react-native';
-import { ListItem } from 'react-native-material-ui';
-import { Container, Header, Content, Button, } from 'native-base';
-import { Toolbar } from 'react-native-material-ui';
+import { Button } from 'react-native-material-ui';
 
 var config = {
     apiKey: "AIzaSyAwP9W6GBNU0-gZZtwU1EtWgn3feIsU9hw",
@@ -98,7 +96,7 @@ export default class Todo extends React.Component {
 
     render() {
         return (
-            <View style={{ flex: 1, backgroundColor: 'purple', justifyContent: 'center' }}>
+            <View style={{ flex: 1, justifyContent: 'center' }}>
                 <View style={{ flex:1 , flexDirection: 'row', justifyContent:"center" , padding:3 }}>
                     <View style={{flex:1, justifyContent:"center"}}>
                         <TextInput
@@ -108,12 +106,7 @@ export default class Todo extends React.Component {
                             value={this.state.text}/>
                     </View>
                     <View style={{justifyContent:"center" }}>
-                        {this.state.add ?
-                            <View><TouchableOpacity
-                                style={{height: 40 ,backgroundColor:"white", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
-                                onPress={this.addTodo.bind(this)}>
-                                <Text>ADD</Text>
-                            </TouchableOpacity></View> :
+                        {this.state.add ? <Button primary text="Primary" />:
                             <View>
                                 <TouchableOpacity
                                     style={{height: 40 ,backgroundColor:"gray", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
