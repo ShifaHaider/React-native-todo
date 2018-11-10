@@ -120,7 +120,6 @@ export default class Todo extends React.Component {
                             </View>}
                     </View>
                 </View>
-
                 <View style={{flex:6}}>
                     {this.state.todos.map((todo)=> {
                         return (
@@ -155,3 +154,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
+helloooooooooo
