@@ -154,4 +154,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
-hellooo
+helloo
