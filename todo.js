@@ -6,6 +6,8 @@ import firebase from 'firebase';
 import firestore from 'firebase/firestore'
 import { TextInput } from 'react-native';
 import { Button } from 'react-native-material-ui';
+import { Toolbar } from 'react-native-material-ui';
+import { ListItem } from 'react-native-material-ui';
 
 var config = {
     apiKey: "AIzaSyAwP9W6GBNU0-gZZtwU1EtWgn3feIsU9hw",
@@ -97,6 +99,7 @@ export default class Todo extends React.Component {
     render() {
         return (
             <View style={{ flex: 1, justifyContent: 'center' }}>
+                <Toolbar centerElement="Todo App"/>
                 <View style={{ flex:1 , flexDirection: 'row', justifyContent:"center" , padding:3 }}>
                     <View style={{flex:1, justifyContent:"center"}}>
                         <TextInput
@@ -106,41 +109,19 @@ export default class Todo extends React.Component {
                             value={this.state.text}/>
                     </View>
                     <View style={{justifyContent:"center" }}>
-                        {this.state.add ? <View><TouchableOpacity
-                            style={{height: 40 ,backgroundColor:"white", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
-                            onPress={this.addTodo.bind(this)}>
-                            <Text>ADD</Text>
-                        </TouchableOpacity></View>:
-                            <View>
-                                <TouchableOpacity
-                                    style={{height: 40 ,backgroundColor:"gray", justifyContent:"center", padding:4, width:50, alignItems:"center" }}
-                                    onPress={this.editTodo.bind(this)}>
-                                    <Text>EDIT</Text>
-                                </TouchableOpacity>
-                            </View>}
+                        {this.state.add ?  <Button raised primary text="ADD"  onPress={this.addTodo.bind(this)} />:
+                            <Button raised primary text="EDIT" onPress={this.editTodo.bind(this)}/>}
                     </View>
                 </View>
                 <View style={{flex:6}}>
                     {this.state.todos.map((todo)=> {
                         return (
-                            <View key={todo.id} style={{flexDirection: 'row', justifyContent:"center" , padding:3, width:"100%" }}>
-                                <View style= {{backgroundColor: '#9e1b9e' , paddingTop: 5,  width:"100%", flexDirection:"row",
-                                 justifyContent:'space-between' }}>
-                                    <Text>{todo.text + ' ' + new Date(todo.time).toLocaleTimeString()}</Text>
-                                    <View style={{flexDirection: 'row'}} >
-                                        <TouchableOpacity style={{height: 40 ,backgroundColor:"white", justifyContent:"center",
-                                 padding:4, width:50, alignItems:"center" }} onPress={this.deleteTodo.bind(this , todo)}>
-                                            <Text>Delete</Text>
-                                        </TouchableOpacity>
-                                        <TouchableOpacity style={{height: 40 ,backgroundColor:"white", justifyContent:"center",
-                                 padding:4, width:50, alignItems:"center" }} onPress={this.editText.bind(this , todo)}>
-                                            <Text>Edit</Text>
-                                        </TouchableOpacity>
-                                    </View>
+                            <View>
+                            <ListItem
+                                divider rightElement="Hello"
+                                centerElement={{primaryText: todo.text + ' ' + new Date(todo.time).toLocaleTimeString()}}/>
                                 </View>
-                            </View>
-                        )
-                    })}
+                        )})}
                 </View>
             </View>
         );
@@ -154,3 +135,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
+//<Button raised primary text="DELETE" onPress={this.deleteTodo.bind(this)}/>
