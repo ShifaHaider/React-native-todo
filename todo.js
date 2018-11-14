@@ -143,4 +143,3 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
-//<Button raised primary text="DELETE" onPress={this.deleteTodo.bind(this)}/>
