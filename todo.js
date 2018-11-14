@@ -8,6 +8,8 @@ import { TextInput } from 'react-native';
 import { Button } from 'react-native-material-ui';
 import { Toolbar } from 'react-native-material-ui';
 import { ListItem } from 'react-native-material-ui';
+import { Card } from 'react-native-material-ui';
+import { Alert } from 'react-native';
 
 var config = {
     apiKey: "AIzaSyAwP9W6GBNU0-gZZtwU1EtWgn3feIsU9hw",
@@ -79,6 +81,7 @@ export default class Todo extends React.Component {
     }
 
     deleteTodo(todo) {
+        console.log(todo);
         this.db.collection('todos').doc(todo.id).delete();
     }
 
@@ -95,11 +98,14 @@ export default class Todo extends React.Component {
             time: Date.now()
         });
     }
+    hello(){
+   console.log('hello');
+    }
 
     render() {
         return (
             <View style={{ flex: 1, justifyContent: 'center' }}>
-                <Toolbar centerElement="Todo App"/>
+                <Toolbar centerElement="Todo App" searchable={{autoFocus: true,placeholder: 'Add todo',}}/>
                 <View style={{ flex:1 , flexDirection: 'row', justifyContent:"center" , padding:3 }}>
                     <View style={{flex:1, justifyContent:"center"}}>
                         <TextInput
@@ -109,7 +115,7 @@ export default class Todo extends React.Component {
                             value={this.state.text}/>
                     </View>
                     <View style={{justifyContent:"center" }}>
-                        {this.state.add ?  <Button raised primary text="ADD"  onPress={this.addTodo.bind(this)} />:
+                        {this.state.add ? <Button raised primary text="ADD" onPress={this.addTodo.bind(this)}/>:
                             <Button raised primary text="EDIT" onPress={this.editTodo.bind(this)}/>}
                     </View>
                 </View>
@@ -117,10 +123,12 @@ export default class Todo extends React.Component {
                     {this.state.todos.map((todo)=> {
                         return (
                             <View>
-                            <ListItem
-                                divider rightElement="Hello"
-                                centerElement={{primaryText: todo.text + ' ' + new Date(todo.time).toLocaleTimeString()}}/>
-                                </View>
+                                <ListItem
+                                    divider rightElement= {<View style={{flexDirection: 'row' }}>
+                                <Button raised primary text="DELETE" onPress={this.deleteTodo.bind(this ,todo)}/>
+                                <Button raised primary text="EDIT" onPress={this.editText.bind(this ,todo)}/></View>}
+                                    centerElement={{primaryText: todo.text + ' ' + new Date(todo.time).toLocaleTimeString()}}/>
+                            </View>
                         )})}
                 </View>
             </View>
