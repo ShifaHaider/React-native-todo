@@ -43,5 +43,3 @@ const styles = StyleSheet.create({
     }
 });
 //<ThemeContext.Provider value={getTheme(uiTheme)}>
-//    <Toolbar centerElement="Searchable"/>
-//</ThemeContext.Provider>
