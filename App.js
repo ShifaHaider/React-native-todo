@@ -42,4 +42,3 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
-//<ThemeContext.Provider value={getTheme(uiTheme)}>
